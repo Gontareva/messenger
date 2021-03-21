@@ -26,7 +26,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
     "parcelStart": "parcel static/*.pug",
-    "parcelBuild": "parcel --build static/*.pug",
+    "parcelBuild": "parcel build static/*.pug",
     "lint": "lint-staged",
     "lintJsFix": "eslint --ext js --cache --fix -- './'",
     "lintSCSSFix": "stylelint --syntax scss --fix -- './**.scss'",

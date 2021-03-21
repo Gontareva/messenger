@@ -1,0 +1,24 @@
+.button {
+	display: block;
+	padding: 1em;
+
+	font-size: 13px;
+	text-align: center;
+	color: $main-color;
+	text-decoration: none;
+
+	background: none;
+	border: none;
+	border-radius: $small-border-radius;
+	cursor: pointer;
+
+	&:focus {
+		outline: none;
+	}
+
+	&_primary {
+		color: $light-color;
+
+		background: $main-color;
+	}
+}

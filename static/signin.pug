@@ -1,0 +1,61 @@
+extends ./layout.pug
+
+include ./helpers/input
+block content
+    .page
+        form.form.page__form(onsubmit='window.submitLoginForm(this); return false;')
+            .form__body
+                h1.form__title Регистрация
+
+                +input({
+                    classes: ['form__block', 'form__block_input'],
+                    label: 'Почта',
+                    name: 'email',
+                    type: 'email'
+                })
+
+                +input({
+                    classes: ['form__block', 'form__block_input'],
+                   label: 'Логин',
+                   name: 'login',
+                   type: 'text'
+               })
+
+                +input({
+		            classes: ['form__block', 'form__block_input'],
+		            label: 'Имя',
+		            name: 'first_name',
+		            type: 'text'
+	            })
+
+                +input({
+		            classes: ['form__block', 'form__block_input'],
+		            label: 'Фамилия',
+		            name: 'second_name',
+		            type: 'text'
+	            })
+
+                +input({
+		            classes: ['form__block', 'form__block_input'],
+		            label: 'Телефон',
+		            name: 'phone',
+		            type: 'phone'
+	            })
+
+                +input({
+                    classes: ['form__block', 'form__block_input'],
+                    label: 'Пароль',
+                    name: 'password',
+                    type: 'password'
+                })
+
+                +input({
+                    classes: ['form__block', 'form__block_input'],
+                    label: 'Пароль (ещё раз)',
+                    name: 'confirm_password',
+                    type: 'password'
+                })
+
+            .form__footer
+                button.button.button_primary Зарегистрироваться
+                button.button Войти

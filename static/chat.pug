@@ -1,0 +1,13 @@
+extends ./layout.pug
+
+include ./helpers/input
+block content
+    .page
+        .page__sidebar
+            .form__block.form__block_line
+                a.link.link_gray.link_arrow.form__profile Профиль
+
+                include ./helpers/search
+                +search()
+        .page__body
+

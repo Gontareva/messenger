@@ -1,0 +1,8 @@
+mixin search(options)
+    - options = options || {};
+    - const id = options.id || 'search';
+
+    .search
+        //.search__placeholder Поиск
+        label(for=id)
+        input.search__input(id=id, type='text', placeholder='Поиск')

@@ -3,3 +3,47 @@
 @import "./button";
 @import "./input";
 @import "./page";
+@import "./error";
+@import "./avatar";
+@import "./form-input";
+@import "./link";
+@import "./search";
+@import "./list";
+
+body {
+	margin: 0;
+
+	line-height: 1;
+	font-family: 'Padauk', sans-serif;
+	color: $text-color;
+}
+
+a {
+	color: $main-color;
+	text-decoration: none;
+
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+h1 {
+	margin: 0;
+
+	line-height: 1;
+}
+
+button {
+	padding: 0;
+
+	background: none;
+	border: none;
+}
+
+input {
+	border: none;
+
+	&:focus {
+		outline: none;
+	}
+}

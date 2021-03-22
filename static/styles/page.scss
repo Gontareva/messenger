@@ -1,11 +1,61 @@
 .page {
 	display: flex;
-	justify-content: center;
-	align-items: center;
 	min-height: 100vh;
 
+	&__body {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+	}
+
 	&__form {
-		width: 340px;
-		min-height: 450px;
+		&_popup {
+			width: 340px;
+			min-height: 450px;
+
+			border-radius: $border-radius;
+			box-shadow: 0 0 6px rgba(0, 0, 0, 0.14);
+		}
+
+		&_default {
+			width: 50%;
+		}
+	}
+
+	&__control {
+		display: flex;
+		flex: 0 0 64px;
+		justify-content: center;
+		align-items: center;
+		min-height: 100%;
+
+		background: $light-background-color;
+	}
+
+	&__button {
+		position: relative;
+
+		width: 28px;
+		height: 28px;
+
+		background: $main-color;
+		border-radius: 100%;
+	}
+
+	&__button-icon {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+
+		width: 11px;
+		height: 10px;
+		transform: translate(-50%, -50%);
+	}
+
+	&__sidebar {
+		display: flex;
+		flex-direction: column;
+		width: 310px;
 	}
 }

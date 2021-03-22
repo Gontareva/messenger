@@ -1,0 +1,72 @@
+extends ./layout.pug
+
+include ./helpers/formInput
+block content
+    -
+        const user = {
+            email: 'email',
+            first_name: 'first_name',
+            second_name: 'second_name',
+            display_name: 'display_name',
+            login: 'login',
+            phone: 'phone'
+        };
+
+    .page
+        .page__control
+            button.page__button
+                img.page__button-icon(src='./images/arrow.svg')
+        .page__body
+
+            form.form.page__form.page__form_default(onsubmit='window.saveChanges(this); return false;')
+                .form__avatar
+                    include ./helpers/avatar
+                    +avatar('')
+
+                .form__body
+                    .list.list_line
+                        +formInput({
+                            classes: ['list__item'],
+                            title: 'Почта',
+                            value: user.email,
+                            name: 'email'
+                        })
+
+                        +formInput({
+                            classes: ['list__item'],
+                            title: 'Логин',
+                            value: user.login,
+                            name: 'login'
+                        })
+
+                        +formInput({
+                            classes: ['list__item'],
+                            title: 'Имя',
+                            value: user.first_name,
+                            name: 'first_name'
+                        })
+
+                        +formInput({
+                            classes: ['list__item'],
+                            title: 'Фамилия',
+                            value: user.second_name,
+                            name:'second_name'
+                        })
+
+                        +formInput({
+                            classes: ['list__item'],
+                            title: 'Имя в чате',
+                            value: user.display_name,
+                            name: 'display_name'
+                        })
+
+                        +formInput({
+                            classes: ['list__item'],
+                            title: 'Телефон',
+                            value: user.phone,
+                            name: 'phone'
+                        })
+
+                .form__footer.form__footer_narrow
+                    button.button.button_primary(type='submit') Сохранить
+

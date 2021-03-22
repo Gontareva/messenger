@@ -3,24 +3,26 @@ extends ./layout.pug
 include ./helpers/input
 block content
     .page
-        form.form.page__form(onsubmit='window.submitLoginForm(this); return false;')
-            .form__body
-                h1.form__title Вход
+        .page__body
+            form.form.page__form.page__form_popup(onsubmit='window.submitLoginForm(this); return false;')
+                .form__body
+                    h1.form__title Вход
 
-                +input({
-                    classes: ['form__block', 'form__block_input'],
-                    label: 'Логин',
-                    name: 'login',
-                    type: 'text'
-                })
+                    .list
+                        +input({
+                            classes: ['list__item'],
+                            label: 'Логин',
+                            name: 'login',
+                            type: 'text'
+                        })
 
-                +input({
-                    classes: ['form__block', 'form__block_input'],
-                    label: 'Пароль',
-                    name: 'password',
-                    type: 'password'
-                })
+                        +input({
+                            classes: ['list__item'],
+                            label: 'Пароль',
+                            name: 'password',
+                            type: 'password'
+                    })
 
-            .form__footer
-                button.button.button_primary(type='submit') Авторизоваться
-                a.button(href='/signin.pug') Нет аккаунта?
+                .form__footer.list
+                    button.button.button_primary.list__item(type='submit') Авторизоваться
+                    a.link.button.list__item(href='/signin.pug') Нет аккаунта?

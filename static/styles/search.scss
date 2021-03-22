@@ -1,0 +1,38 @@
+.search {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	padding: 0.5em;
+
+	background: $avatar-background-color;
+	border-radius: $small-border-radius;
+
+	&__input {
+		display: block;
+
+		background: inherit;
+
+		&::placeholder {
+			color: $mute-text-color;
+			//text-align: center;
+		}
+
+		&:focus::placeholder,
+		&:active::placeholder {
+			display: none;
+		}
+	}
+
+	label {
+		width: 1.5em;
+		height: 1.5em;
+
+		&::before {
+			content: url('/images/search.svg');
+
+			width: 1.5em;
+			height: 1.5em;
+		}
+	}
+}

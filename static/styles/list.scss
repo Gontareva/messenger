@@ -1,0 +1,23 @@
+.list {
+	display: flex;
+	flex-direction: column;
+
+	&__item {
+		margin-bottom: 1.125em;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	&_line &__item {
+		margin: 0;
+		padding: 0.7em 0;
+
+		border-bottom: 1px solid $avatar-background-color;
+
+		&:last-child {
+			border: 0;
+		}
+	}
+}

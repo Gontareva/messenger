@@ -16,9 +16,17 @@
 		outline: none;
 	}
 
+	&:hover {
+		box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+	}
+
 	&_primary {
 		color: $light-color;
 
 		background: $main-color;
+	}
+
+	&_stretch {
+		width: 100%;
 	}
 }

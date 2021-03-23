@@ -1,16 +1,17 @@
 @import "./helpers/variables";
 @import "./form";
 @import "./button";
-@import "./input";
+@import "../components/input/input";
 @import "./page";
 @import "./error";
-@import "./avatar";
-@import "./form-input";
+@import "../components/avatar/avatar";
+@import "../components/formInput/form-input";
 @import "./link";
-@import "./search";
+@import "../components/search/search";
 @import "./list";
 
 body {
+	box-sizing: border-box;
 	margin: 0;
 
 	line-height: 1;
@@ -21,6 +22,8 @@ body {
 a {
 	color: $main-color;
 	text-decoration: none;
+
+	cursor: pointer;
 
 	&:hover {
 		text-decoration: none;
@@ -38,6 +41,7 @@ button {
 
 	background: none;
 	border: none;
+	cursor: pointer;
 }
 
 input {

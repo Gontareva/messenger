@@ -1,6 +1,6 @@
-extends ./layout.pug
+extends components/layout/layout
 
-include ./helpers/input
+include components/input/input
 block content
     .page
         .page__body
@@ -10,7 +10,7 @@ block content
 
                     .list
                         +input({
-                            classes: ['list__item'],
+                            classes: [''],
                             label: 'Логин',
                             name: 'login',
                             type: 'text'

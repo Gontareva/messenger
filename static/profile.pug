@@ -1,6 +1,6 @@
-extends ./layout.pug
+extends components/layout/layout
 
-include ./helpers/formInput
+include components/formInput/formInput
 block content
     -
         const user = {
@@ -19,7 +19,7 @@ block content
         .page__body
             form.form.page__form.page__form_default(onsubmit='window.submitLoginForm(this); return false;')
                 .form__avatar
-                    include ./helpers/avatar
+                    include components/avatar/avatar
                     +avatar('', {canChange: true})
 
                 .form__body

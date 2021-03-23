@@ -1,13 +1,13 @@
-extends ./layout.pug
+extends components/layout/layout
 
-include ./helpers/input
+include components/input/input
 block content
     .page
         .page__sidebar
             .form__block.form__block_line
                 a.link.link_gray.link_arrow.form__profile Профиль
 
-                include ./helpers/search
+                include components/search/search
                 +search()
         .page__body
 

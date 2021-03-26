@@ -1,6 +1,4 @@
-mixin avatar(imageSrc, options)
-    - options = options || {};
-
+mixin avatar(imageSrc, options={})
     .avatar
         .avatar__image(style={'background-image': `url(${imageSrc})`})
 

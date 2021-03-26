@@ -1,8 +1,6 @@
 .search {
 	display: flex;
-	justify-content: center;
 	align-items: center;
-	width: 100%;
 	padding: 0.5em;
 
 	background: $avatar-background-color;
@@ -10,28 +8,21 @@
 
 	&__input {
 		display: block;
+		width: 100%;
 
-		background: inherit;
+		color: $text-color;
+
+		background: none;
 
 		&::placeholder {
 			color: $mute-text-color;
 		}
-
-		&:focus::placeholder,
-		&:active::placeholder {
-			display: none;
-		}
 	}
 
-	label {
+	&__label {
+		content: url('/images/search.svg');
+
 		width: 1.5em;
 		height: 1.5em;
-
-		&::before {
-			content: url('/images/search.svg');
-
-			width: 1.5em;
-			height: 1.5em;
-		}
 	}
 }

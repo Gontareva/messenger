@@ -1,6 +1,4 @@
-mixin formInput(options)
-    - options = options || {};
-
+mixin formInput(options={})
     .form-input(class=options.classes)
         .form-input__title #{options.title}
         input.form-input__value(

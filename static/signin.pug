@@ -1,6 +1,10 @@
 extends components/layout/layout
 
 include components/input/input
+
+block params
+    - title = 'Регистрация';
+
 block content
     .page
         .page__body
@@ -9,55 +13,57 @@ block content
                     h1.form__title Регистрация
 
                     .list
-                        +input({
-                            classes: ['list__item'],
-                            label: 'Почта',
-                            name: 'email',
-                            type: 'email'
-                        })
+                        .list__item
+                            +input({
+                                label: 'Почта',
+                                name: 'email',
+                                type: 'email'
+                            })
 
-                        +input({
-                            classes: ['list__item'],
-                           label: 'Логин',
-                           name: 'login',
-                           type: 'text'
-                       })
+                        .list__item
+                            +input({
+                               label: 'Логин',
+                               name: 'login',
+                               type: 'text'
+                           })
 
-                        +input({
-                            classes: ['list__item'],
-                            label: 'Имя',
-                            name: 'first_name',
-                            type: 'text'
-                        })
+                        .list__item
+                            +input({
+                                label: 'Имя',
+                                name: 'first_name',
+                                type: 'text'
+                            })
 
-                        +input({
-                            classes: ['list__item'],
-                            label: 'Фамилия',
-                            name: 'second_name',
-                            type: 'text'
-                        })
+                        .list__item
+                            +input({
+                                label: 'Фамилия',
+                                name: 'second_name',
+                                type: 'text'
+                            })
 
-                        +input({
-                            classes: ['list__item'],
-                            label: 'Телефон',
-                            name: 'phone',
-                            type: 'phone'
-                        })
+                        .list__item
+                            +input({
+                                label: 'Телефон',
+                                name: 'phone',
+                                type: 'phone'
+                            })
 
-                        +input({
-                            classes: ['list__item'],
-                            label: 'Пароль',
-                            name: 'password',
-                            type: 'password'
-                        })
+                        .list__item
+                            +input({
+                                label: 'Пароль',
+                                name: 'password',
+                                type: 'password'
+                            })
 
-                        +input({
-                            classes: ['list__item'],
-                            label: 'Пароль (ещё раз)',
-                            name: 'confirm_password',
-                            type: 'password'
-                        })
+                        .list__item
+                            +input({
+                                label: 'Пароль (ещё раз)',
+                                name: 'confirm_password',
+                                type: 'password'
+                            })
 
                 .form__footer.list
-                    button.button.button_primary.list__item Зарегистрироваться
-                    a.link.button(href='/login.pug') Войти
+                    .list__item
+                        button.button.button_primary.button_stretch Зарегистрироваться
+                    .list__item
+                        a.link.button.button_stretch(href='/login.pug') Войти

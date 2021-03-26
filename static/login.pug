@@ -1,6 +1,10 @@
 extends components/layout/layout
 
 include components/input/input
+
+block params
+    - title = 'Авторизация';
+
 block content
     .page
         .page__body
@@ -9,20 +13,22 @@ block content
                     h1.form__title Вход
 
                     .list
-                        +input({
-                            classes: [''],
-                            label: 'Логин',
-                            name: 'login',
-                            type: 'text'
-                        })
+                        .list__item
+                            +input({
+                                label: 'Логин',
+                                name: 'login',
+                                type: 'text'
+                            })
 
-                        +input({
-                            classes: ['list__item'],
-                            label: 'Пароль',
-                            name: 'password',
-                            type: 'password'
+                        .list__item
+                            +input({
+                                label: 'Пароль',
+                                name: 'password',
+                                type: 'password'
                     })
 
                 .form__footer.list
-                    button.button.button_primary.list__item(type='submit') Авторизоваться
-                    a.link.button.list__item(href='/signin.pug') Нет аккаунта?
+                    .list__item
+                        button.button.button_primary.button_stretch(type='submit') Авторизоваться
+                    .list__item
+                        a.link.button.button_stretch(href='/signin.pug') Нет аккаунта?

@@ -1,16 +1,16 @@
-window.submitLoginForm = function (form) {
+window.submitLoginForm = (form) => {
 	//eslint-disable-next-line
 	console.log(getData(form));
 };
-window.submitSigninForm = function (form) {
+window.submitSigninForm = (form) => {
 	//eslint-disable-next-line
 	console.log(getData(form));
 };
-window.saveChanges = function (form) {
+window.saveChanges = (form) => {
 	//eslint-disable-next-line
 	console.log(getData(form));
 };
-window.savePassword = function (form) {
+window.savePassword = (form) => {
 	//eslint-disable-next-line
 	console.log(getData(form));
 };
@@ -30,3 +30,7 @@ function getData(form) {
 
 	return data;
 }
+
+window.goBack = () => {
+	window.history.back();
+};

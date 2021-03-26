@@ -5,10 +5,14 @@
 @import "./page";
 @import "./error";
 @import "../components/avatar/avatar";
-@import "../components/formInput/form-input";
+@import "../components/formInput/formInput";
 @import "./link";
 @import "../components/search/search";
 @import "./list";
+@import "../components/chatListItem/chatListItem";
+@import "../components/chat/chat";
+@import "../components/message/message";
+//@import "../components/preloader/preloader";
 
 body {
 	box-sizing: border-box;
@@ -44,7 +48,10 @@ button {
 	cursor: pointer;
 }
 
+textarea,
 input {
+	font-family: 'Padauk', sans-serif;
+
 	border: none;
 
 	&:focus {
